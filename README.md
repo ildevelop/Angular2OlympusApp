@@ -1,5 +1,5 @@
-Ilya Radu App 
-
+Author:Ilya Radu App 
+version 0.0.2
 #commands to Start on Angular 2
 #Requirement
 ###node.js 
