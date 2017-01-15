@@ -1,8 +1,15 @@
 Ilya Radu App 
 
-#commands to start:
+#commands to Start on Angular 2
+##Requirement
+node.js 
+npm
 
+#run project
 npm install
-npm start 
 
-Application up and running!
+After- to compile TypeScript code
+
+#run on local server:
+npm start
+go to http://localhost:3000 .
