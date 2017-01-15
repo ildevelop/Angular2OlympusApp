@@ -12,5 +12,13 @@ export class UserInfo{
   title7: string;
   constructor(){}
 
-
+  toString(){
+    let string = '';
+    for (let property in this) {
+      if (this.hasOwnProperty(property)) {
+        string+=' '+property;
+      }
+    }
+    return string;
+  }
 }

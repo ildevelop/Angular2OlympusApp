@@ -5,6 +5,15 @@
 var UserInfo = (function () {
     function UserInfo() {
     }
+    UserInfo.prototype.toString = function () {
+        var string = '';
+        for (var property in this) {
+            if (this.hasOwnProperty(property)) {
+                string += ' ' + property;
+            }
+        }
+        return string;
+    };
     return UserInfo;
 }());
 exports.UserInfo = UserInfo;

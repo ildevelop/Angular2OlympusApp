@@ -33,11 +33,12 @@
         <div class="col col-sm-2">
           <label>Title1</label>
           <input type="email" [(ngModel)]="user.title1"
-                 email="email" class="form-control"
-                 name="email" placeholder="E-MAIL"
-                 required  #email="ngModel" />
-          <div [hidden]="email.valid || email.pristine"
+                 name="title1" class="form-control"
+                 name="title1" placeholder="title1"
+                 required  #title1="ngModel" />
+          <div [hidden]="title1.valid || title1.pristine"
                class="alert alert-danger">
+            please insert title1
           </div>
         </div>
         <div class="col col-sm-2">
@@ -70,14 +71,14 @@
           <div class="col-lg-6">
             <div class="input-group">
               <span class="input-group-sm">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="checkbox" (change) ="setIsChecked()" aria-label="Checkbox for following text input">
                 <label class="sml">Example text 1</label>
               </span>
-              <span class="input-group-sm">
+              <span (change) ="setIsChecked()" class="input-group-sm">
                 <input type="checkbox" aria-label="Checkbox for following text input">
                 <label class="sml">Example text 2</label>
               </span>
-              <span class="input-group-sm">
+              <span (change) ="setIsChecked()" class="input-group-sm">
                 <input type="checkbox" aria-label="Checkbox for following text input">
                 <label class="sml">Example text 3</label>
 
@@ -99,7 +100,19 @@
               <textarea class = "form-control" rows = "2"></textarea>
             </div>
           </form>
-
+          <div *ngIf="isChecked" class="error">
+            <div class = "form-group">
+              <textarea class = "form-control" rows = "2">
+                {{user.title1}}
+                {{user.title2}}
+                {{user.title3}}
+                {{user.title4}}
+                {{user.title5}}
+                {{user.title6}}
+                {{user.title7}}
+              </textarea>
+            </div>
+          </div>
         </div>
 
         <div class="pull-right">

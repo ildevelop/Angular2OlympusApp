@@ -16,6 +16,7 @@ var UserInfo_1 = require('./UserInfo');
 var MainComponent = (function () {
     function MainComponent() {
         this.user = new UserInfo_1.UserInfo();
+        this.isChecked = false;
     }
     MainComponent.prototype.ngOnInit = function () {
     };
@@ -23,11 +24,14 @@ var MainComponent = (function () {
         event.preventDefault();
         console.log(user);
     };
+    MainComponent.prototype.setIsChecked = function () {
+        this.isChecked = !this.isChecked;
+    };
     MainComponent = __decorate([
         core_1.Component({
             selector: 'main-menu',
             templateUrl: './app/menu/menu.html',
-            styles: [".text-center{background-color:darkgray;}.btn1{background-color:darkgray;font-weight:bold;}.btn1:hover{background-color:aquamarine;color:#6BE;}.row{margin:15px;}.sml{font-size: smaller;}"]
+            styleUrls: ['./app/menu/menu.css']
         }), 
         __metadata('design:paramtypes', [])
     ], MainComponent);
