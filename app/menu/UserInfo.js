@@ -1,8 +1,5 @@
 "use strict";
 /**
- * Created by Radu on 1/15/2017.
- */
-/**
  * Created by Radu on 1/13/2017.
  */
 var UserInfo = (function () {

@@ -26,40 +26,86 @@
   </nav>
   <div class="jumbotron">
     <form (ngSubmit)="sumbitForm($event,user)"  #InfoForm="ngForm">
-      <div class="row">
-      <div class="form-group">
-        <label>Field Title1</label>
-        <input type="email" [(ngModel)]="user.title1"
-               email="email" class="form-control"
-               name="email" placeholder="E-MAIL"
-               required  #email="ngModel" />
-        <div [hidden]="email.valid || email.pristine"
-             class="alert alert-danger">
+
+      <div class="row justify-content-md-center">
+        <h4>FIELD TITLE</h4>
+        <div class="form-group">
+        <div class="col col-sm-2">
+          <label>Title1</label>
+          <input type="email" [(ngModel)]="user.title1"
+                 email="email" class="form-control"
+                 name="email" placeholder="E-MAIL"
+                 required  #email="ngModel" />
+          <div [hidden]="email.valid || email.pristine"
+               class="alert alert-danger">
+          </div>
+        </div>
+        <div class="col col-sm-2">
+          <label for="2">Title</label>
+          <input type="text" class="form-control" id="2" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="col col-sm-2">
+          <label for="3">Title</label>
+          <input type="text" class="form-control" id="3" aria-describedby="emailHelp" placeholder="Enter email">
+
+        </div>
+        <div class="col col-sm-2">
+          <label for="4">Title</label>
+          <input type="date" class="form-control" id="4" aria-describedby="emailHelp" placeholder="Enter email">
+
+        </div>
+        <div class="col col-sm-2">
+          <label for="5">Title</label>
+          <input type="datetime" class="form-control" id="5" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="col col-sm-2">
+          <label for="6">Title</label>
+          <input type="text" class="form-control" id="6" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <br><br><br>
+
+
+        <h4>FIELD TITLE</h4>
+        <div class="row justify-content-md-left">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <span class="input-group-sm">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+                <label class="sml">Example text 1</label>
+              </span>
+              <span class="input-group-sm">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+                <label class="sml">Example text 2</label>
+              </span>
+              <span class="input-group-sm">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+                <label class="sml">Example text 3</label>
+
+              </span>
+            </div>
+          </div>
+        </div>
+          <h4>FIELD TITLE</h4>
+
+          <form role = "form">
+            <div class = "form-group">
+              <textarea class = "form-control" rows = "2"></textarea>
+            </div>
+          </form>
+          <h4>FIELD TITLE</h4>
+
+          <form role = "form">
+            <div class = "form-group">
+              <textarea class = "form-control" rows = "2"></textarea>
+            </div>
+          </form>
+
         </div>
 
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="2">Field Title</label>
-        <input type="text" class="form-control" id="2" aria-describedby="emailHelp" placeholder="Enter email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="3">Field Title</label>
-        <input type="text" class="form-control" id="3" aria-describedby="emailHelp" placeholder="Enter email">
-        <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="4">Field Title</label>
-        <input type="date" class="form-control" id="4" aria-describedby="emailHelp" placeholder="Enter email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="5">Field Title</label>
-        <input type="datetime" class="form-control" id="5" aria-describedby="emailHelp" placeholder="Enter email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="6">Field Title</label>
-        <input type="text" class="form-control" id="6" aria-describedby="emailHelp" placeholder="Enter email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <label for="7">Field Title</label>
-        <input type="text" class="form-control" id="7" aria-describedby="emailHelp" placeholder="Enter email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-        <div class="col-md-6 col-md-offset-3">
-    <button type="submit" class="btn btn1" [disabled]="!InfoForm.form.valid" >Submit</button>
+        <div class="pull-right">
+            <button type="submit" class="btn btn1" [disabled]="!InfoForm.form.valid" >Submit</button>
         </div>
+
       </div>
     </form>
 

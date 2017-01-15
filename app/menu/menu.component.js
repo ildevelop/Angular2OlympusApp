@@ -27,7 +27,7 @@ var MainComponent = (function () {
         core_1.Component({
             selector: 'main-menu',
             templateUrl: './app/menu/menu.html',
-            styles: [".text-center{background-color:darkgray;}.btn1{background-color:darkgray;font-weight:bold;}.btn1:hover{background-color:aquamarine;color:#6BE;}.row{margin:15px;}"]
+            styles: [".text-center{background-color:darkgray;}.btn1{background-color:darkgray;font-weight:bold;}.btn1:hover{background-color:aquamarine;color:#6BE;}.row{margin:15px;}.sml{font-size: smaller;}"]
         }), 
         __metadata('design:paramtypes', [])
     ], MainComponent);
