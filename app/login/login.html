@@ -1,0 +1,47 @@
+<div *ngIf="!isLoggedIn">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2 class="text-center">{{title}}</h2>
+    <div *ngIf="errorFlag" class="alert alert-danger">{{errorMessage}}</div>
+    <form  (ngSubmit)="login($event,user)"  #LoginForm="ngForm">
+      <div class="form-group">
+        <label>E-mail Address</label>
+        <input type="email" [(ngModel)]="user.email"
+               email="email" class="form-control"
+               name="email" placeholder="E-MAIL"
+               required  #email="ngModel" />
+        <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+
+            Email is required
+        </div>
+
+      </div>
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password"
+             required placeholder="password"
+             [(ngModel)]="user.password" name="password"
+             #password="ngModel" >
+      <div [hidden]="password.pristine || password.valid"
+           class="alert alert-danger">
+        Password is required
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" (click) ="setChecked()"> Remember Me
+        </label>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <!--<button  class="btn btn1">LOG IN</button>-->
+
+        <button type="submit" class="btn btn1" [disabled]="!LoginForm.form.valid">Log In</button>
+
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<div *ngIf="isLoggedIn">
+  <button class="btn btn-link" (click)="setLogout()">Logout </button>
+  <main-menu></main-menu>
+  </div>
