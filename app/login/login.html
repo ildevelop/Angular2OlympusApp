@@ -1,14 +1,12 @@
 <div *ngIf="!isLoggedIn">
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h2 class="text-center">{{title}}</h2>
-    <div *ngIf="errorFlag" class="alert alert-danger">{{errorMessage}}</div>
-    <form  (ngSubmit)="login($event,user)"  #LoginForm="ngForm">
-      <div class="form-group">
-        <label>E-mail Address</label>
+<div class="login">
+  <img class="profile-img" src="../app/src/logo.png" alt="logo" >
+  <h1 class="text-center">{{title}}</h1>
+  <div *ngIf="errorFlag" class="alert alert-danger">{{errorMessage}}</div>
+    <form (ngSubmit)="login($event,user)"  #LoginForm="ngForm">
         <input type="email" [(ngModel)]="user.email"
                email="email" class="form-control"
-               name="email" placeholder="E-MAIL"
+               name="email" placeholder="Email"
                required  #email="ngModel" />
         <div [hidden]="email.valid || email.pristine"
              class="alert alert-danger">
@@ -16,29 +14,22 @@
             Email is required
         </div>
 
-      </div>
-      <label for="password">Password</label>
       <input type="password" class="form-control" id="password"
-             required placeholder="password"
+             required placeholder="Password"
              [(ngModel)]="user.password" name="password"
              #password="ngModel" >
       <div [hidden]="password.pristine || password.valid"
            class="alert alert-danger">
         Password is required
       </div>
-      <div class="checkbox">
+      <div class="checkbox-inline">
         <label>
           <input type="checkbox" (click) ="setChecked()"> Remember Me
         </label>
       </div>
-      <div class="col-md-6 col-md-offset-3">
-        <!--<button  class="btn btn1">LOG IN</button>-->
-
-        <button type="submit" class="btn btn1" [disabled]="!LoginForm.form.valid">Log In</button>
-
-      </div>
+      <br>
+      <button type="submit" class="btn btn-block" [disabled]="!LoginForm.form.valid">Log In</button>
     </form>
-  </div>
 </div>
 </div>
 <div *ngIf="isLoggedIn">

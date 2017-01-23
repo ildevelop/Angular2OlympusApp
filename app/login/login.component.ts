@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit{
   errorFlag: boolean = false;
   users : User[];
   user= new User();
-  title= "w e l c o m e".toUpperCase();
+  title= "W e l c o m e";
 
   login(event: any,user: User) {
     this.loading=true;

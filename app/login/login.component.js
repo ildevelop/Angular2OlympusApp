@@ -22,7 +22,7 @@ var LoginComponent = (function () {
         this.isLoggedIn = false;
         this.errorFlag = false;
         this.user = new User_1.User();
-        this.title = "w e l c o m e".toUpperCase();
+        this.title = "W e l c o m e";
     }
     LoginComponent.prototype.login = function (event, user) {
         this.loading = true;
