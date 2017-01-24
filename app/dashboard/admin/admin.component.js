@@ -8,27 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by Radu on 1/15/2017.
- */
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var common_1 = require('@angular/common');
-var ForgotComponent = (function () {
-    function ForgotComponent(route, location) {
-        this.route = route;
-        this.location = location;
-        this.title = 'Forgot pass';
+var AdminComponent = (function () {
+    function AdminComponent() {
     }
-    ForgotComponent = __decorate([
+    AdminComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
-            selector: 'forgot',
-            template: " \n    <h1>{{title}}</h1> \n  "
+            //directives: [ ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES ],
+            selector: 'admin',
+            templateUrl: 'admin.html',
+            styleUrls: ['admin.css']
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, common_1.Location])
-    ], ForgotComponent);
-    return ForgotComponent;
+        __metadata('design:paramtypes', [])
+    ], AdminComponent);
+    return AdminComponent;
 }());
-exports.ForgotComponent = ForgotComponent;
-//# sourceMappingURL=forgot.component.js.map
+exports.AdminComponent = AdminComponent;
+//# sourceMappingURL=admin.component.js.map

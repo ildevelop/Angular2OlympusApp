@@ -18,7 +18,8 @@ var forgot_component_1 = require('./login/forgot.component');
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'forgot', component: forgot_component_1.ForgotComponent }
+    // { path: 'admin',  component: DashboardComponent ,canActivate:[CanActivateAdmin] },//TODO,
+    { path: 'forgot', component: forgot_component_1.ForgotComponent } //TODO sign ap
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

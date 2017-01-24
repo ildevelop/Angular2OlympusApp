@@ -1,3 +1,6 @@
+/**
+ * Created by QA on 1/24/2017.
+ */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8,27 +11,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by Radu on 1/15/2017.
- */
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var common_1 = require('@angular/common');
-var ForgotComponent = (function () {
-    function ForgotComponent(route, location) {
-        this.route = route;
-        this.location = location;
-        this.title = 'Forgot pass';
+// import {User} from './User';
+var StatisticComponent = (function () {
+    function StatisticComponent() {
     }
-    ForgotComponent = __decorate([
+    StatisticComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
-            selector: 'forgot',
-            template: " \n    <h1>{{title}}</h1> \n  "
+            selector: 'statistics',
+            templateUrl: 'app/Statistics/statistics.html',
+            styleUrls: ['app/Statistics/statistics.css']
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, common_1.Location])
-    ], ForgotComponent);
-    return ForgotComponent;
+        __metadata('design:paramtypes', [])
+    ], StatisticComponent);
+    return StatisticComponent;
 }());
-exports.ForgotComponent = ForgotComponent;
-//# sourceMappingURL=forgot.component.js.map
+exports.StatisticComponent = StatisticComponent;
+//# sourceMappingURL=statistics.component.js.map

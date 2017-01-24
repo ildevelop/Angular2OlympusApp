@@ -9,11 +9,11 @@ import {LoginService} from "./login.service";
 @Component({
   moduleId: module.id,
   selector: 'forgot',
-  template: `
-    <h1>{{title}}</h1>
+  template: ` 
+    <h1>{{title}}</h1> 
   `
 })
-
+//TODO forgotpass.html - input email + send button
 export class ForgotComponent {
   title = 'Forgot pass';
   constructor(

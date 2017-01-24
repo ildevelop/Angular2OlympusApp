@@ -19,10 +19,11 @@ var AppComponent = (function () {
                 // '<login></login>' +
                 '<div>' +
                 '<nav>' +
-                '<a routerLink="/login" class="btn btn-link" >Home</a>' +
-                '<a routerLink="/forgot" class="btn btn-link" >Forgot password </a>' +
+                // '<a routerLink="/login" class="btn btn-link" >Home</a>' +
+                // '<a routerLink="/forgot" class="btn btn-link" >Forgot password </a>' +
                 '</nav>' +
                 '<router-outlet></router-outlet>' +
+                // <login></login> // TODO 1 => make an login component with route inside to forgotpassss inside login component
                 '</div>' +
                 '</div>',
         }), 
