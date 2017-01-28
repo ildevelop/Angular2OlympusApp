@@ -10,7 +10,7 @@ import { ForgotComponent }      from './login/forgot.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login',  component: LoginComponent },
-  // { path: 'admin',  component: DashboardComponent ,canActivate:[CanActivateAdmin] },//TODO,
+  // { path: 'dashboard',  component: DashboardComponent ,canActivate:[CanActivateDashboard] },//TODO,
   { path: 'forgot', component: ForgotComponent } //TODO sign ap
 ];
 @NgModule({

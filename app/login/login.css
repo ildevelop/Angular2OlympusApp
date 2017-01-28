@@ -9,26 +9,24 @@
 /*.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }*/
 /*.btn-block { width: 100%; display:block; }*/
 
-body{
-
-
-}
 .login {
   position: absolute;
   top: 30%;
   left: 50%;
   margin: -150px 0 0 -150px;
-  width:300px;
-  height:300px;
+  width:250px;
+  height:250px;
 
 }
 
 .profile-img{
-  height: 300px;
-  width:300px;
+  height: 250px;
+  width:250px;
 }
 
-
+.text-center{
+  margin-top: -30px;
+}
 .login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
 
 input {
