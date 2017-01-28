@@ -5,7 +5,7 @@ import { NgModule }             from '@angular/core';
 import {RouterModule, Routes, CanActivate} from '@angular/router';
 import { LoginComponent }   from './login/login.component';
 import { ForgotComponent }      from './login/forgot.component';
-import { DashboardComponent }      from './dashboard/admin/admin.component';
+// import { DashboardComponent }      from './dashboard/admin/admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
