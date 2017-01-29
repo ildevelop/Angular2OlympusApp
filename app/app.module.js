@@ -11,14 +11,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var login_component_1 = require('./login/login.component');
 var menu_component_1 = require('./menu/menu.component');
 var login_service_1 = require("./login/login.service");
 var forgot_component_1 = require('./login/forgot.component');
 var app_routing_module_1 = require('./app-routing.module');
+var dashboard_component_1 = require('./dashboard/dashboard.component');
+var transcripts_component_1 = require('./transcripts/transcripts.component');
+var statistics_component_1 = require('./statistic/statistics.component');
+var qa_component_1 = require('./qa/qa.component');
+var admin_component_1 = require('./admin/admin.component');
 var AppModule = (function () {
-    function AppModule() {
+    // constructor(storageService: LocalStorageService){}
+    // Diagnostic only: inspect router configuration
+    function AppModule(router) {
+        console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
     }
     AppModule = __decorate([
         core_1.NgModule({
@@ -31,14 +40,19 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 login_component_1.LoginComponent,
                 menu_component_1.MainComponent,
-                forgot_component_1.ForgotComponent
+                forgot_component_1.ForgotComponent,
+                dashboard_component_1.DashboardComponent,
+                transcripts_component_1.TranscriptsComponent,
+                statistics_component_1.StatisticsComponent,
+                qa_component_1.QAComponent,
+                admin_component_1.AdminComponent
             ],
             providers: [
                 login_service_1.LoginService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppModule);
     return AppModule;
 }());

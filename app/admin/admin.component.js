@@ -1,6 +1,3 @@
-/**
- * Created by QA on 1/24/2017.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -12,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import {User} from './User';
-var StatisticComponent = (function () {
-    function StatisticComponent() {
+var AdminComponent = (function () {
+    function AdminComponent() {
     }
-    StatisticComponent = __decorate([
+    AdminComponent = __decorate([
         core_1.Component({
-            selector: 'statistics',
-            templateUrl: 'app/Statistics/statistics.html',
-            styleUrls: ['app/Statistics/statistics.css']
+            //directives: [ ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES ],
+            selector: 'admin',
+            templateUrl: './app/admin/admin.html',
+            styleUrls: ['./app/admin/admin.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], StatisticComponent);
-    return StatisticComponent;
+    ], AdminComponent);
+    return AdminComponent;
 }());
-exports.StatisticComponent = StatisticComponent;
-//# sourceMappingURL=statistics.component.js.map
+exports.AdminComponent = AdminComponent;
+//# sourceMappingURL=admin.component.js.map

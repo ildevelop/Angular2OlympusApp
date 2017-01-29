@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-light" style="background-color: #0f7595;">
+  <!-- Navbar content -->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,11 +15,17 @@
       <ul class="nav navbar-nav">
         <li>
           <img class="profile-img" src="../app/src/logo.png" alt="logo"  width="80px" height="80px"></li>
-        <li><a href="#">Statistics</a></li>
-        <li><a href="#">Admin panel</a></li>
-        <li><a href="#">QA Form</a></li>
-        <li><a href="#">Transcripts</a></li>
+        <li><a routerLink="/admin" routerLinkActive="active">Admin panel</a></li>
+        <li><a routerLink="/satistics" routerLinkActive="active">Statistics</a></li>
+        <li><a routerLink="/qa" routerLinkActive="active">QA Form</a></li>
+        <li><a routerLink="/transcripts" routerLinkActive="active">Transcripts</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Welcome User</a></li>
+        <li><a href="login">Log Out</a></li>
+        <!-- TODO Method from loginservice to logout with backend-->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<router-outlet></router-outlet>

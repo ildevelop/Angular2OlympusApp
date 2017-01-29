@@ -13,22 +13,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var login_routes_1 = require('./login/login.routes');
 var login_component_1 = require('./login/login.component');
 var forgot_component_1 = require('./login/forgot.component');
 // import { DashboardComponent }      from './dashboard/admin/admin.component';
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
-    // { path: 'dashboard',  component: DashboardComponent ,canActivate:[CanActivateDashboard] },//TODO,
-    { path: 'forgot', component: forgot_component_1.ForgotComponent } //TODO sign ap
-];
+    { path: 'forgot', component: forgot_component_1.ForgotComponent }
+].concat(login_routes_1.LoginRoutes);
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
             imports: [router_1.RouterModule.forRoot(routes)],
-            exports: [router_1.RouterModule]
+            exports: [router_1.RouterModule],
+            providers: [
+                login_routes_1.authProviders
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppRoutingModule);

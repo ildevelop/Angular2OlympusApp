@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var User_1 = require('./User');
 var login_service_1 = require('./login.service');
+var router_1 = require('@angular/router');
 var LoginComponent = (function () {
-    function LoginComponent(loginService) {
+    function LoginComponent(loginService, router) {
         this.loginService = loginService;
+        this.router = router;
         this.isChecked = false;
         this.errorMessage = 'Login Failed';
         this.loginApproved = false;
@@ -22,7 +24,6 @@ var LoginComponent = (function () {
         this.isLoggedIn = false;
         this.errorFlag = false;
         this.user = new User_1.User();
-        this.title = "W e l c o m e";
     }
     LoginComponent.prototype.login = function (event, user) {
         this.loading = true;
@@ -32,13 +33,14 @@ var LoginComponent = (function () {
         if (this.isChecked) {
             localStorage.setItem("user", body);
         }
+        //TODO revoke http request to backend check if user authenticated
         if (this.checkUsers(user)) {
             // if(user.email == "ilya@gmail.com" && user.password == "1234"){
-            var logged = JSON.stringify(this.isLoggedIn);
+            var logged = JSON.stringify(true);
             localStorage.setItem("isLoggedIn", logged);
-            this.setLogin();
+            console.log('Routes: ', JSON.stringify(this.router.config, undefined, 2));
+            this.router.navigate(['/dashboard']);
         }
-        // this.Router.navigate(['/formpage']);
     };
     LoginComponent.prototype.checkUsers = function (user) {
         var index = 0;
@@ -95,7 +97,7 @@ var LoginComponent = (function () {
             templateUrl: './app/login/login.html',
             styleUrls: ['./app/login/login.css']
         }), 
-        __metadata('design:paramtypes', [login_service_1.LoginService])
+        __metadata('design:paramtypes', [login_service_1.LoginService, router_1.Router])
     ], LoginComponent);
     return LoginComponent;
 }());

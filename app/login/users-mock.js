@@ -1,10 +1,10 @@
 "use strict";
 exports.USERS = [
-    { email: "ilya@gmail.com", password: "1234" },
-    { email: "masha@gmail.com", password: '1234' },
-    { email: "liza@gmail.com", password: '1234' },
-    { email: "tanya@gmail.com", password: '1234' },
-    { email: "bbb@gmail.com", password: '1234' },
-    { email: "kfc@gmail.com", password: '1234' },
+    { email: "ilya@gmail.com", password: "1234", permissions: { "admin": "admin", "qa": "qa" } },
+    { email: "masha@gmail.com", password: '1234', permissions: { "admin": "admin" } },
+    { email: "liza@gmail.com", password: '1234', permissions: { "admin": "admin" } },
+    { email: "tanya@gmail.com", password: '1234', permissions: { "admin": "admin" } },
+    { email: "bbb@gmail.com", password: '1234', permissions: { "admin": "admin" } },
+    { email: "kfc@gmail.com", password: '1234', permissions: { "admin": "admin" } }
 ];
 //# sourceMappingURL=users-mock.js.map
