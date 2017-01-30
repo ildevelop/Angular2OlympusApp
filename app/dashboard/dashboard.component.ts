@@ -7,9 +7,9 @@ import {User} from "../login/User";
 
 @Component({
   //directives: [ ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES ],
-  selector: 'dashboard',
   templateUrl:'./app/dashboard/dashboard.html',
   styleUrls:['./app/dashboard/dashboard.css']
+
 })
 export class DashboardComponent implements OnInit{
 

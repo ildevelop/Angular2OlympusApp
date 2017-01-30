@@ -23,17 +23,21 @@ var transcripts_component_1 = require('./transcripts/transcripts.component');
 var statistics_component_1 = require('./statistic/statistics.component');
 var qa_component_1 = require('./qa/qa.component');
 var admin_component_1 = require('./admin/admin.component');
+var login_routing_module_1 = require('./login/login-routing.module');
+var dashboard_routing_module_1 = require("./dashboard/dashboard-routing.module");
 var AppModule = (function () {
     // constructor(storageService: LocalStorageService){}
     // Diagnostic only: inspect router configuration
     function AppModule(router) {
-        console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+        // console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                dashboard_routing_module_1.DashboardRoutingModule,
+                login_routing_module_1.LoginRoutingModule,
                 app_routing_module_1.AppRoutingModule
             ],
             declarations: [

@@ -1,6 +1,6 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
 import {RouterModule, Router}from '@angular/router';
 import { AppComponent }  from './app.component';
 import { LoginComponent} from './login/login.component';
@@ -13,11 +13,15 @@ import { TranscriptsComponent } from './transcripts/transcripts.component';
 import { StatisticsComponent } from './statistic/statistics.component';
 import { QAComponent } from './qa/qa.component';
 import { AdminComponent } from './admin/admin.component';
+import {LoginRoutingModule} from './login/login-routing.module';
+import {DashboardRoutingModule} from "./dashboard/dashboard-routing.module";
 
 @NgModule({
   imports:[
     BrowserModule,
     FormsModule,
+    DashboardRoutingModule,
+    LoginRoutingModule,
     AppRoutingModule
   ],
   declarations: [
@@ -41,7 +45,7 @@ export class AppModule {
  // constructor(storageService: LocalStorageService){}
   // Diagnostic only: inspect router configuration
   constructor(router: Router) {
-    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    // console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
   }
 }
 
