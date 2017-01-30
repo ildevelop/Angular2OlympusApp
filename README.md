@@ -6,10 +6,10 @@ version 0.0.2
 ###npm
 
 #run project
-##npm install
+'npm install'
 
 After- to compile TypeScript code
 
 #run on local server:
-##npm start
+'npm start'
 go to http://localhost:3000 .
