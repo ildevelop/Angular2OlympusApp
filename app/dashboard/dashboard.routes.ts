@@ -13,9 +13,9 @@ import { TranscriptsComponent } from '../transcripts/transcripts.component';
 import { TranscriptsGuard } from '../transcripts/transcripts.guard';
 
 export const DashboardRoutes: Routes = [
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent,   canActivateChild: [AdminGuard] },
   { path: 'statistics', component: StatisticsComponent },
-  { path: 'qa', component: QAComponent },
+  { path: 'qa', component: QAComponent, canActivateChild: [QAGuard] },
   { path: 'transcripts', component: TranscriptsComponent },
 ];
 

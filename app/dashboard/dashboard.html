@@ -10,16 +10,20 @@
         <span class="icon-bar"></span>
       </button>
     </div>
+
+    <nav>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
+
           <img class="profile-img" src="../app/src/logo.png" alt="logo"  width="80px" height="80px"></li>
+
         <li><a routerLink="/admin" routerLinkActive="active">Admin panel</a></li>
-        <li><a routerLink="/satistics" routerLinkActive="active">Statistics</a></li>
+        <li><a routerLink="/statistics" routerLinkActive="active">Statistics</a></li>
         <li><a routerLink="/qa" routerLinkActive="active">QA Form</a></li>
         <li><a routerLink="/transcripts" routerLinkActive="active">Transcripts</a></li>
-<router-outlet></router-outlet>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Welcome User</a></li>
@@ -27,5 +31,7 @@
         <!-- TODO Method from loginservice to logout with backend-->
       </ul>
     </div><!-- /.navbar-collapse -->
+</nav>
   </div><!-- /.container-fluid -->
 </nav>
+<router-outlet></router-outlet>

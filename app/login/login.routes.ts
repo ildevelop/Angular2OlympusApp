@@ -8,7 +8,7 @@ import { DashboardGuard } from '../dashboard/dashboard.guard';
 import {DashboardRoutes} from "../dashboard/dashboard.routes";
 
 export const LoginRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent}
+  { path: 'dashboard', component: DashboardComponent , canActivateChild: [DashboardGuard] }
 ];
 
 

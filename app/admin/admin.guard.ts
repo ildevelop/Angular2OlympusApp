@@ -3,14 +3,22 @@
  */
 import {isLoggedin,getTokenFromBrowser,checkPermissions}  from '../login/isLoggedIn.service';
 import { Injectable }          from '@angular/core';
-import {CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import {CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild} from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import {Token} from'../login/token';
 
 @Injectable()
-export class AdminGuard implements CanActivate {
+export class AdminGuard implements CanActivateChild {
+  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean>|Promise<boolean>|boolean {
+    if (isLoggedin()&&checkPermissions("admin")) {
+      return true;
+    }
+    this.router.navigate(['/dashboard']);
+    return false;
+
+  }
   token :Token;
   errorMessage :string='';
 
@@ -31,13 +39,7 @@ export class AdminGuard implements CanActivate {
     console.error(errMsg); // log to console instead
     return Observable.throw(errMsg);
   }
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    if (isLoggedin()&&checkPermissions("admin")) {
-      return true;
-    }
-    this.router.navigate(['/dashboard']);
-    return false;
-  }
+
 
 
 }
