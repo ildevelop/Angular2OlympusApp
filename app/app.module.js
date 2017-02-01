@@ -25,6 +25,7 @@ var qa_component_1 = require('./qa/qa.component');
 var admin_component_1 = require('./admin/admin.component');
 var login_routing_module_1 = require('./login/login-routing.module');
 var dashboard_routing_module_1 = require("./dashboard/dashboard-routing.module");
+var dashboard_routes_1 = require("./dashboard/dashboard.routes");
 var AppModule = (function () {
     // constructor(storageService: LocalStorageService){}
     // Diagnostic only: inspect router configuration
@@ -52,7 +53,8 @@ var AppModule = (function () {
                 admin_component_1.AdminComponent
             ],
             providers: [
-                login_service_1.LoginService
+                login_service_1.LoginService,
+                dashboard_routes_1.authDashboardProviders
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

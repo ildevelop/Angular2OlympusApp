@@ -26,6 +26,9 @@ var DashboardRoutingModule = (function () {
         core_1.NgModule({
             imports: [router_1.RouterModule.forChild(routes)],
             exports: [router_1.RouterModule],
+            providers: [
+                dashboard_routes_1.authDashboardProviders
+            ]
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], DashboardRoutingModule);

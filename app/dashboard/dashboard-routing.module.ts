@@ -6,7 +6,7 @@
  * Created by Radu on 1/15/2017.
  */
 import { NgModule }             from '@angular/core';
-import {RouterModule, Routes, CanActivate, Router} from '@angular/router';
+import {RouterModule, Routes, Router} from '@angular/router';
 import {DashboardRoutes, authDashboardProviders} from "./dashboard.routes";
 
 
@@ -17,9 +17,9 @@ const routes: Routes = [
   imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule ]
   ,
-  // providers: [
-  //   authDashboardProviders
-  // ]
+  providers: [
+    authDashboardProviders
+  ]
 })
 export class DashboardRoutingModule {
 

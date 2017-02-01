@@ -12,10 +12,11 @@ import {Token} from'../login/token';
 @Injectable()
 export class AdminGuard implements CanActivateChild {
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean>|Promise<boolean>|boolean {
+    console.log("before can activate admin child");
     if (isLoggedin()&&checkPermissions("admin")) {
       return true;
     }
-    this.router.navigate(['/dashboard']);
+    // this.router.navigate(['/dashboard']);
     return false;
 
   }

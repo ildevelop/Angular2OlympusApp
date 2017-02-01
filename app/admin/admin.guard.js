@@ -23,10 +23,11 @@ var AdminGuard = (function () {
         this.errorMessage = '';
     }
     AdminGuard.prototype.canActivateChild = function (childRoute, state) {
+        console.log("before can activate admin child");
         if (isLoggedIn_service_1.isLoggedin() && isLoggedIn_service_1.checkPermissions("admin")) {
             return true;
         }
-        this.router.navigate(['/dashboard']);
+        // this.router.navigate(['/dashboard']);
         return false;
     };
     AdminGuard.prototype.extractData = function (res) {

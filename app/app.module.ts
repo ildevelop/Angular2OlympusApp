@@ -15,6 +15,7 @@ import { QAComponent } from './qa/qa.component';
 import { AdminComponent } from './admin/admin.component';
 import {LoginRoutingModule} from './login/login-routing.module';
 import {DashboardRoutingModule} from "./dashboard/dashboard-routing.module";
+import {authDashboardProviders} from "./dashboard/dashboard.routes";
 
 @NgModule({
   imports:[
@@ -36,7 +37,8 @@ import {DashboardRoutingModule} from "./dashboard/dashboard-routing.module";
     AdminComponent
   ],
   providers: [
-    LoginService
+    LoginService,
+    authDashboardProviders
   ],
   bootstrap:    [ AppComponent ]
 })
