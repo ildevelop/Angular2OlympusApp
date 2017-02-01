@@ -38,9 +38,10 @@ export class LoginComponent implements OnInit{
    // if(user.email == "ilya@gmail.com" && user.password == "1234"){
       let logged = JSON.stringify(true);
       localStorage.setItem("isLoggedIn", logged);
+      this.setLogin();
      // console.log('Routes: ', JSON.stringify(this.router.config, undefined, 2));
       console.log("before navigate to /dashboard ")
-      this.router.navigate(['/dashboard']);
+      // this.router.navigate(['/dashboard']);
      // this.setLogin();
     }
 

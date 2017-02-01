@@ -7,6 +7,7 @@ import {User} from "../login/User";
 
 @Component({
   //directives: [ ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES ],
+  selector: 'app-dashboard',
   templateUrl:'./app/dashboard/dashboard.html',
   styleUrls:['./app/dashboard/dashboard.css']
 
