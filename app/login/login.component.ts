@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {User} from './User';
 import { LoginService } from './login.service';
+import { Router }      from '@angular/router';
+import { Http, Headers, Response } from '@angular/http';
 import {ForgotComponent} from './forgot.component';
 import {forEach} from "@angular/router/src/utils/collection";
 
@@ -21,8 +23,8 @@ export class LoginComponent implements OnInit{
   errorFlag: boolean = false;
   users : User[];
   user= new User();
-  title= "W e l c o m e";
 
+  constructor(private loginService: LoginService, public router: Router) { }
   login(event: any,user: User) {
     this.loading=true;
     event.preventDefault();
@@ -31,13 +33,16 @@ export class LoginComponent implements OnInit{
     if(this.isChecked){
       localStorage.setItem("user", body);
     }
+    //TODO revoke http request to backend check if user authenticated
     if(this.checkUsers(user)){
    // if(user.email == "ilya@gmail.com" && user.password == "1234"){
-      let logged = JSON.stringify(this.isLoggedIn);
+      let logged = JSON.stringify(true);
       localStorage.setItem("isLoggedIn", logged);
-      this.setLogin();
+     // console.log('Routes: ', JSON.stringify(this.router.config, undefined, 2));
+      console.log("before navigate to /dashboard ")
+      this.router.navigate(['/dashboard']);
+     // this.setLogin();
     }
-     // this.Router.navigate(['/formpage']);
 
   }
 
@@ -63,7 +68,6 @@ export class LoginComponent implements OnInit{
     this.errorMessage=message;
   }
 
-  constructor(private loginService: LoginService) { }
 
   getUsers(): void {
     this.loginService.getUsers().then(users => this.users = users);

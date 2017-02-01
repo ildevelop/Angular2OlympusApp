@@ -1,25 +1,39 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
-import {RouterModule}from '@angular/router';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
+import {RouterModule, Router}from '@angular/router';
 import { AppComponent }  from './app.component';
 import { LoginComponent} from './login/login.component';
 import {MainComponent}from './menu/menu.component'
 import {LoginService} from "./login/login.service";
 import {ForgotComponent} from './login/forgot.component';
 import {AppRoutingModule} from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TranscriptsComponent } from './transcripts/transcripts.component';
+import { StatisticsComponent } from './statistic/statistics.component';
+import { QAComponent } from './qa/qa.component';
+import { AdminComponent } from './admin/admin.component';
+import {LoginRoutingModule} from './login/login-routing.module';
+import {DashboardRoutingModule} from "./dashboard/dashboard-routing.module";
 
 @NgModule({
   imports:[
     BrowserModule,
     FormsModule,
+    DashboardRoutingModule,
+    LoginRoutingModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
     LoginComponent,
     MainComponent,
-    ForgotComponent
+    ForgotComponent,
+    DashboardComponent,
+    TranscriptsComponent,
+    StatisticsComponent,
+    QAComponent,
+    AdminComponent
   ],
   providers: [
     LoginService
@@ -28,6 +42,6 @@ import {AppRoutingModule} from './app-routing.module';
 })
 
 export class AppModule {
- // constructor(storageService: LocalStorageService){}
+
 }
 

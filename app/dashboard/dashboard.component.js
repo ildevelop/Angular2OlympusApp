@@ -1,6 +1,3 @@
-/**
- * Created by QA on 1/24/2017.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,20 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by ilya on 29/01/2017.
+ */
 var core_1 = require('@angular/core');
-// import {User} from './User';
-var StatisticComponent = (function () {
-    function StatisticComponent() {
+var DashboardComponent = (function () {
+    function DashboardComponent() {
     }
-    StatisticComponent = __decorate([
+    DashboardComponent.prototype.ngOnInit = function () {
+        console.log("before get user dashboard");
+        this.user = JSON.parse(localStorage.getItem('user'));
+        console.log("after get user " + this.user);
+    };
+    DashboardComponent = __decorate([
         core_1.Component({
-            selector: 'statistics',
-            templateUrl: 'app/Statistics/statistics.html',
-            styleUrls: ['app/Statistics/statistics.css']
+            //directives: [ ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES ],
+            templateUrl: './app/dashboard/dashboard.html',
+            styleUrls: ['./app/dashboard/dashboard.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], StatisticComponent);
-    return StatisticComponent;
+    ], DashboardComponent);
+    return DashboardComponent;
 }());
-exports.StatisticComponent = StatisticComponent;
-//# sourceMappingURL=statistics.component.js.map
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map

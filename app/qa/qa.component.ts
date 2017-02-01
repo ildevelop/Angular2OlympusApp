@@ -8,11 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
-  selector:'statistics',
-  templateUrl:'app/Statistics/statistics.html',
-  styleUrls:['app/Statistics/statistics.css']
+  selector:'qa',
+  templateUrl:'./app/qa/qa.html',
+  styleUrls:['./app/qa/qa.css']
 })
-export class StatisticComponent{
+export class QAComponent{
 
 
 }
