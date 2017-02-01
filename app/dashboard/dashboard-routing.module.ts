@@ -17,9 +17,9 @@ const routes: Routes = [
   imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule ]
   ,
-  // providers: [
-  //   authDashboardProviders
-  // ]
+  providers: [
+    authDashboardProviders
+  ]
 })
 export class DashboardRoutingModule {
 

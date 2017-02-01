@@ -42,10 +42,6 @@ import {DashboardRoutingModule} from "./dashboard/dashboard-routing.module";
 })
 
 export class AppModule {
- // constructor(storageService: LocalStorageService){}
-  // Diagnostic only: inspect router configuration
-  constructor(router: Router) {
-    // console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
-  }
+
 }
 

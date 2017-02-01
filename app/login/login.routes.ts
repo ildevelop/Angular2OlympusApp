@@ -8,8 +8,8 @@ import { DashboardGuard } from '../dashboard/dashboard.guard';
 import {DashboardRoutes} from "../dashboard/dashboard.routes";
 
 export const LoginRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent , canActivateChild: [DashboardGuard] }
+  // { path: 'dashboard', component: DashboardComponent , canActivateChild: [DashboardGuard] }
 ];
 
 
-export const authProviders = [DashboardGuard];//qa gaurd , statistics guard
+export const authProviders = [];//qa gaurd , statistics guard

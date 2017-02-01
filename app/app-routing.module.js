@@ -17,11 +17,14 @@ var login_routes_1 = require('./login/login.routes');
 var login_component_1 = require('./login/login.component');
 var forgot_component_1 = require('./login/forgot.component');
 var login_service_1 = require("./login/login.service");
+var dashboard_guard_1 = require("./dashboard/dashboard.guard");
+var dashboard_component_1 = require("./dashboard/dashboard.component");
 // import { DashboardComponent }      from './dashboard/admin/admin.component';
 var routes = [
-    // { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'forgot', component: forgot_component_1.ForgotComponent }
+    { path: 'forgot', component: forgot_component_1.ForgotComponent },
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent, canActivateChild: [dashboard_guard_1.DashboardGuard] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -31,6 +34,7 @@ var AppRoutingModule = (function () {
             imports: [router_1.RouterModule.forRoot(routes)],
             exports: [router_1.RouterModule],
             providers: [
+                dashboard_guard_1.DashboardGuard,
                 login_routes_1.authProviders,
                 login_service_1.LoginService
             ]

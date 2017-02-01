@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var login_component_1 = require('./login/login.component');
 var menu_component_1 = require('./menu/menu.component');
@@ -26,10 +25,7 @@ var admin_component_1 = require('./admin/admin.component');
 var login_routing_module_1 = require('./login/login-routing.module');
 var dashboard_routing_module_1 = require("./dashboard/dashboard-routing.module");
 var AppModule = (function () {
-    // constructor(storageService: LocalStorageService){}
-    // Diagnostic only: inspect router configuration
-    function AppModule(router) {
-        // console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
@@ -56,7 +52,7 @@ var AppModule = (function () {
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [])
     ], AppModule);
     return AppModule;
 }());

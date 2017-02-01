@@ -12,15 +12,17 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 // import { DashboardComponent }      from './dashboard/admin/admin.component';
 
 const routes: Routes = [
- // { path: '', redirectTo: '/login', pathMatch: 'full' },
+ { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login',  component: LoginComponent},
-  { path: 'forgot', component: ForgotComponent }
+  { path: 'forgot', component: ForgotComponent },
+  { path: 'dashboard', component: DashboardComponent , canActivateChild: [DashboardGuard] }
   // ...LoginRoutes
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ],
   providers: [
+    DashboardGuard,
     authProviders,
     LoginService
   ]
